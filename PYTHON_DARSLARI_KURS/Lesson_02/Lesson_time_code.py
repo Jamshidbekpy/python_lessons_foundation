@@ -82,7 +82,7 @@ print(d[::-1])
 
 
 
-o = "salom salom salom salom salom"
+o = "salom salom salom salom salom e"
 s = "salom"
 h = s.center(len(o))
 print(o)
