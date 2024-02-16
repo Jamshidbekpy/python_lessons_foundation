@@ -98,6 +98,8 @@ print(dir(variable2))      #dunder metodlar
 
 print(variable2.zfill(35))
 
+print()
+
 
 
 
