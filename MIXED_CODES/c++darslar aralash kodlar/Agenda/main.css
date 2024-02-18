@@ -1,0 +1,60 @@
+@keyframes rainbow {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: violet; }
+}
+
+/* H1 tegi uchun stil */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    animation: rainbow 10s infinite; /* Harakatlanishni belgilash */
+}
+@keyframes rainbow2 {
+    0% { color: rgb(53, 38, 212); }
+    20% { color: rgb(244, 162, 9); }
+    40% { color: rgb(255, 17, 0); }
+    60% { color: rgb(86, 249, 86); }
+    80% { color: rgb(217, 27, 13); }
+    100% { color: rgb(120, 17, 120); }
+}
+@keyframes rainbow4 {
+    0% { background-color: rgb(238, 246, 249); }
+    20% { background-color: rgb(173, 234, 240); }
+    40% { background-color: rgb(198, 183, 239); }
+    60% { background-color: rgb(114, 236, 114); }
+    80% { background-color: rgb(171, 236, 243); }
+    100% { background-color: rgb(238, 156, 220); }
+}
+header{
+   animation:rainbow4 15s infinite; /* Harakatlanishni belgilash */ ; 
+}
+h2{
+    text-align: center;
+    animation: rainbow 1s infinite; /* Harakatlanishni belgilash */
+}
+p{
+    color:rgb(239, 18, 18)
+}
+
+h3{
+   text-indent: 100px ; 
+}
+@keyframes rainbow3 {
+    0% { background-color: red; }
+    20% { background-color: orange; }
+    40% { background-color: yellow; }
+    60% { background-color: green; }
+    80% { background-color: rgb(240, 37, 139); }
+    100% { background-color: violet; }
+}
+footer{
+    text-align: center;
+    animation: rainbow3 1s infinite; 
+}
+h4{
+    
+}
