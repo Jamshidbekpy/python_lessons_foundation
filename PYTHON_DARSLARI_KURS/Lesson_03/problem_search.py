@@ -26,4 +26,4 @@ get_info(search, a)
 
 # Muallif Umidjon
 # Tartiblanmagan holda ba'zi o'zgartirishlar bilan masala yechimi
-# print([f'{name[i]} {surname[i]} {address[i]}dan' for i in range(4) if search.lower() == name[i].lower() or search.lower() == surname[i].lower() or search.lower() == address[i].lower()])
+# print([f'{name[i].capitalize()} {surname[i].capitalize()} {address[i].capitalize()}dan' for i in range(4) if search.lower() == name[i].lower() or search.lower() == surname[i].lower() or search.lower() == address[i].lower()])
