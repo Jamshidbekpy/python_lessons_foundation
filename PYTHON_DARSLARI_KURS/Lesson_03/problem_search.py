@@ -30,4 +30,4 @@ get_info(search, a)
 
 # Muallif Jamshidbek
 # Tartiblanmagan holda ba'zi o'zgartirishlar bilan masala yechimi
-#print([n+" "+s+" "+a+'dan' for index,(n,s,a) in enumerate(zip(name, surname,address)) if search.lower() in (n+" "+s+" "+a+'dan').lower()])
+# print([n+" "+s+" "+a+'dan' for index,(n,s,a) in enumerate(zip(name, surname,address)) if search.lower() in (n+" "+s+" "+a+'dan').lower()])
