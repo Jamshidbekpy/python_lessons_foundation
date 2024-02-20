@@ -27,3 +27,7 @@ get_info(search, a)
 # Muallif Umidjon
 # Tartiblanmagan holda ba'zi o'zgartirishlar bilan masala yechimi
 # print([f'{name[i].capitalize()} {surname[i].capitalize()} {address[i].capitalize()}dan' for i in range(4) if search.lower() == name[i].lower() or search.lower() == surname[i].lower() or search.lower() == address[i].lower()])
+
+# Muallif Jamshidbek
+# Tartiblanmagan holda ba'zi o'zgartirishlar bilan masala yechimi
+# print([n+" "+s+" "+a+'dan' for index,(n,s,a) in enumerate(zip(name, surname,address)) if search.lower() in (n+" "+s+" "+a+'dan').lower()])
