@@ -26,6 +26,8 @@ surname = ["Yorqulov", "Xasanov", "Aliyev", "Xasanov"]
 address = ["Samarqand", "Buxoro", "Navoiy", "Toshkent"]
 
 search = input("Qidirish uchun parametr(ism,familiya,shahar) kiriting:")
+
+print([n.capitalize()+" "+s.capitalize()+" "+a.capitalize()+'dan' for n, s, a in zip(name, surname, address) if search.capitalize() in [n, s, a]])
 a = name + surname + address
 get_info(search, a)
 
