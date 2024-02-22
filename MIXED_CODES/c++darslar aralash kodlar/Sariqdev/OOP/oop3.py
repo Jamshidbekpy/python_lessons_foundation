@@ -3,7 +3,7 @@ class Person:
         self.first_name = first_name
         self.last_name = last_name
         self.year_of_birth = year_of_birth
-        self.pasport_series =passport_series
+        self.pasport_series = passport_series
         self.age = 0
     def get_first_name(self):
         return self.first_name
