@@ -45,42 +45,68 @@ add_or_sold = input("Mahsulot qo'shmoqchimisiz yoki sotmoqchimisiz: +/-:")
 # """
 #                                           Add_Product bo'limi
 # """
+database_r = database.copy()
+for key, value in database_r.items():
+    for key_2, value_2 in value.items():
+        value[key_2] = 0
+database_s = database.copy()
+for key, value in database_s.items():
+    for key_2, value_2 in value.items():
+        value[key_2] = 0
+print(database_s)
+
+
+
+
+
+
+
 if add_or_sold == "+":
-    add_report = {}
-    add_report_key = ""
-    add_report_value = {}
-    add_report_value_key = ""
-    add_report_value_value = 0
     while True:
         add_product_key = input("Add product (Oilasi) /no:")
         if add_product_key != "no":
+            database_r_key = add_product_key
             if not (add_product_key in database):
                 add_product_value = {}
+                database_r_value = {}
                 while True:
                     add_product_value_key = input("Add product name (nomi) /no:")
                     if add_product_value_key != "no":
+                        database_r_value_key = add_product_value_key
                         if not (add_product_value_key in add_product_value):
                             add_product_value_value = int(input("Add_Miqdori:"))
+                            database_r_value_value = add_product_value_value
                             add_product_value[add_product_value_key] = add_product_value_value
+                            database_r_value[database_r_value_key] = database_r_value_value
                         else:
                             add_product_value_value = int(input("Add_Miqdori:"))
+                            database_r_value_value = add_product_value_value
                             add_product_value[add_product_value_key] += add_product_value_value
+                            database_r_value[add_product_value_key] += add_product_value_value
                     else:
                         break
                 database[add_product_key] = add_product_value
+                database_r[database_r_key] = database_r_value
             else:
                 add_product_value_key = input("Add product name (nomi) /no:")
                 if add_product_value_key != "no":
-                    if not add_product_value_key in database[add_product_key]:
-                        database[add_product_key][add_product_value_key] = int(input("Add_Miqdori:"))
+                    database_r_value_key = add_product_value_key
+                    if not (add_product_value_key in database[add_product_key]):
+                        add_product_value_value = int(input("Add_Miqdori:"))
+                        database_r_value_value = add_product_value_value
+                        database[add_product_key][add_product_value_key] = add_product_value_value
+                        database_r[database_r_key][database_r_value_key] = database_r_value_value
                     else:
-                        database[add_product_key][add_product_value_key] += int(input("Add_Midori:"))
+                        add_product_value_value = int(input("Add_Midori:"))
+                        database_r_value_value = add_product_value_value
+                        database[add_product_key][add_product_value_key] += add_product_value_value
+                        database_r[database_r_key][database_r_value_key] += database_r_value_value
         else:
             break
-
 # """
 #                                           Sold Product bo'limi
 # """
+
 elif add_or_sold == "-":
     while True:
         sold_product_key = input("Sold product (Oilasi) /no:")
@@ -106,9 +132,8 @@ elif add_or_sold == "-":
                             print("Kechirasiz bizda ushbu mahsulot sizga kerakli miqdordan kam!Hohlasangiz kamroq oling.Olmasangiz 0 ni kiriting!")
         else:
             break
-print(database)
 
-
+print(database_r)
 # """
 #                                                 Report bo'limi
 # """
