@@ -1,3 +1,6 @@
+from colorama import init, Fore
+
+init(autoreset=True)
 # """
 #                                            Database bo'limi
 # """
@@ -37,112 +40,149 @@ database = {
     }
 }
 
-
-
-add_or_sold = input("Mahsulot qo'shmoqchimisiz yoki sotmoqchimisiz: +/-:")
-
-
 # """
 #                                           Add_Product bo'limi
 # """
-database_r = database.copy()
-for key, value in database_r.items():
+database_r = {}
+database_s = {}
+for key, value in database.items():
+    database_r[key] = value.copy()
+    for key_2, value_2 in database_r[key].items():
+        database_r[key][key_2] = 0
+
+for key, value in database.items():
+    database_s[key] = value.copy()
+    for key_2, value_2 in database_s[key].items():
+        database_s[key][key_2] = 0
+# """
+#                              Mavjud mahsulotlarni ko'rish bo'limi
+# """
+# print(database.items())
+for key, value in database.items():
+    print()
+    print(Fore.BLUE + key.center(124))
     for key_2, value_2 in value.items():
-        value[key_2] = 0
-database_s = database.copy()
-for key, value in database_s.items():
-    for key_2, value_2 in value.items():
-        value[key_2] = 0
-print(database_s)
+        print(Fore.GREEN + key_2, end="   ")
+    print()
 
 
 
+while True:
 
-
-
-
-if add_or_sold == "+":
-    while True:
-        add_product_key = input("Add product (Oilasi) /no:")
-        if add_product_key != "no":
-            database_r_key = add_product_key
-            if not (add_product_key in database):
-                add_product_value = {}
-                database_r_value = {}
-                while True:
-                    add_product_value_key = input("Add product name (nomi) /no:")
+    add_or_sold = input(Fore.RED + "Mahsulot qo'shmoqchimisiz,sotmoqchimisiz,report bo'limi,database va hisobni tugatish: +/-/?/DB/E:")
+    if add_or_sold == "+":
+        while True:
+            add_product_key = input(Fore.CYAN + "Add product (Oilasi) /no:")
+            if add_product_key != "no":
+                database_r_key = add_product_key
+                if not (add_product_key in database):
+                    add_product_value = {}
+                    database_r_value = {}
+                    while True:
+                        add_product_value_key = input(Fore.LIGHTGREEN_EX + "Add product name (nomi) /no:")
+                        if add_product_value_key != "no":
+                            database_r_value_key = add_product_value_key
+                            if not (add_product_value_key in add_product_value):
+                                add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Miqdori:"))
+                                database_r_value_value = add_product_value_value
+                                add_product_value[add_product_value_key] = add_product_value_value
+                                database_r_value[database_r_value_key] = database_r_value_value
+                            else:
+                                add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Miqdori:"))
+                                database_r_value_value = add_product_value_value
+                                add_product_value[add_product_value_key] += add_product_value_value
+                                database_r_value[add_product_value_key] += add_product_value_value
+                        else:
+                            break
+                    database[add_product_key] = add_product_value
+                    database_r[database_r_key] = database_r_value
+                else:
+                    add_product_value_key = input(Fore.LIGHTGREEN_EX + "Add product name (nomi) /no:")
                     if add_product_value_key != "no":
                         database_r_value_key = add_product_value_key
-                        if not (add_product_value_key in add_product_value):
-                            add_product_value_value = int(input("Add_Miqdori:"))
+                        if not (add_product_value_key in database[add_product_key]):
+                            add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Miqdori:"))
                             database_r_value_value = add_product_value_value
-                            add_product_value[add_product_value_key] = add_product_value_value
-                            database_r_value[database_r_value_key] = database_r_value_value
+                            database[add_product_key][add_product_value_key] = add_product_value_value
+                            database_r[database_r_key][database_r_value_key] = database_r_value_value
                         else:
-                            add_product_value_value = int(input("Add_Miqdori:"))
+                            add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Midori:"))
                             database_r_value_value = add_product_value_value
-                            add_product_value[add_product_value_key] += add_product_value_value
-                            database_r_value[add_product_value_key] += add_product_value_value
-                    else:
-                        break
-                database[add_product_key] = add_product_value
-                database_r[database_r_key] = database_r_value
+                            database[add_product_key][add_product_value_key] += add_product_value_value
+                            database_r[database_r_key][database_r_value_key] += database_r_value_value
             else:
-                add_product_value_key = input("Add product name (nomi) /no:")
-                if add_product_value_key != "no":
-                    database_r_value_key = add_product_value_key
-                    if not (add_product_value_key in database[add_product_key]):
-                        add_product_value_value = int(input("Add_Miqdori:"))
-                        database_r_value_value = add_product_value_value
-                        database[add_product_key][add_product_value_key] = add_product_value_value
-                        database_r[database_r_key][database_r_value_key] = database_r_value_value
-                    else:
-                        add_product_value_value = int(input("Add_Midori:"))
-                        database_r_value_value = add_product_value_value
-                        database[add_product_key][add_product_value_key] += add_product_value_value
-                        database_r[database_r_key][database_r_value_key] += database_r_value_value
-        else:
-            break
+                break
 # """
 #                                           Sold Product bo'limi
 # """
 
-elif add_or_sold == "-":
-    while True:
-        sold_product_key = input("Sold product (Oilasi) /no:")
-        if sold_product_key != "no":
-            if not(sold_product_key in database):
-                print("Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!")
-                #Buyurtma bo'limiga yuboriladi
-            else:
-                # while True:
-                sold_product_value = database[sold_product_key]
-                sold_product_value_key = input("Sold product name (nomi) /n:")
-                if not(sold_product_value_key in sold_product_value):
+    elif add_or_sold == "-":
+        while True:
+            sold_product_key = input(Fore.CYAN + "Sold product (Oilasi) /no:")
+            if sold_product_key != "no":
+                database_s_key = sold_product_key
+                if not(sold_product_key in database):
                     print("Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!")
-                    # Buyurtma bo'limiga yuboriladi
+                    #Buyurtma bo'limiga yuboriladi
                 else:
-                    while True:
-                        sold_product_value_value = int(input("Sold_Miqdori:"))
+                    sold_product_value = database[sold_product_key]
+                    database_s_value = database_s[database_s_key]
+                    sold_product_value_key = input(Fore.LIGHTGREEN_EX + "Sold product name (nomi) /n:")
+                    database_s_value_key = sold_product_value_key
+                    if not(sold_product_value_key in sold_product_value):
+                        print("Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!")
+                        # Buyurtma bo'limiga yuboriladi
+                    else:
+                        while True:
+                            sold_product_value_value = int(input(Fore.LIGHTRED_EX + "Sold_Miqdori:"))
+                            database_s_value_value = sold_product_value_value
 
-                        if database[sold_product_key][sold_product_value_key] >= sold_product_value_value:
-                            database[sold_product_key][sold_product_value_key] -= sold_product_value_value
-                            break
-                        else:
-                            print("Kechirasiz bizda ushbu mahsulot sizga kerakli miqdordan kam!Hohlasangiz kamroq oling.Olmasangiz 0 ni kiriting!")
-        else:
-            break
-
-print(database_r)
+                            if database[sold_product_key][sold_product_value_key] >= sold_product_value_value:
+                                database[sold_product_key][sold_product_value_key] -= sold_product_value_value
+                                database_s[database_s_key][database_s_value_key] += database_s_value_value
+                                break
+                            else:
+                                print("Kechirasiz bizda ushbu mahsulot sizga kerakli miqdordan kam!Hohlasangiz kamroq oling.Olmasangiz 0 ni kiriting!")
+            else:
+                break
 # """
 #                                                 Report bo'limi
 # """
+    elif add_or_sold == "?":
+        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar sotildi:".center(144))
+        print()
+        for key, value in database_s.items():
+            print()
+            print(Fore.BLUE + key.center(124))
+            for key_2, value_2 in value.items():
+                print(Fore.LIGHTMAGENTA_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
+            print()
+        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar yangi keldi:".center(124))
+        print()
+        for key, value in database_r.items():
+            print()
+            print(Fore.GREEN + key.center(124))
+            for key_2, value_2 in value.items():
+                print(Fore.LIGHTYELLOW_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
+            print()
 
-# Add Product bo'limi uchun hisobot
 
 
-
-
+    elif add_or_sold == "DB":
+        print(Fore.RED + "Ogohlantirish:Ushbu bolimga kirish cheklangan!")
+        login = input(Fore.CYAN + "Loginni kiriting:")
+        password = input(Fore.CYAN + "Passwordni kiriting:")
+        if login == "Jamshidbek" and password == "11.06.2004":
+            print(Fore.LIGHTRED_EX + "Ba'zadagi mahsulotlar:".center(144))
+            print()
+            for key, value in database.items():
+                print()
+                print(Fore.LIGHTMAGENTA_EX + key.center(124))
+                for key_2, value_2 in value.items():
+                    print(Fore.LIGHTBLUE_EX + key_2 + "==>", Fore.LIGHTRED_EX + str(value_2), end="   ")
+                print()
+    elif add_or_sold == "E":
+        break
 
 # """
 #                                                Buyurtma bo'limi
