@@ -46,6 +46,11 @@ add_or_sold = input("Mahsulot qo'shmoqchimisiz yoki sotmoqchimisiz: +/-:")
 #                                           Add_Product bo'limi
 # """
 if add_or_sold == "+":
+    add_report = {}
+    add_report_key = ""
+    add_report_value = {}
+    add_report_value_key = ""
+    add_report_value_value = 0
     while True:
         add_product_key = input("Add product (Oilasi) /no:")
         if add_product_key != "no":
@@ -102,13 +107,20 @@ elif add_or_sold == "-":
         else:
             break
 print(database)
-# """
-#                                                Buyurtma bo'limi
-# """
+
 
 # """
 #                                                 Report bo'limi
 # """
 
+# Add Product bo'limi uchun hisobot
+
+
+
+
+
+# """
+#                                                Buyurtma bo'limi
+# """
 
 
