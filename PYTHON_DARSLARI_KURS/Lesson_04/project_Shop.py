@@ -60,19 +60,19 @@ for key, value in database.items():
 # print(database.items())
 for key, value in database.items():
     print()
-    print(Fore.BLUE + key.center(124))
+    print(Fore.BLUE + key.center(135))
     for key_2, value_2 in value.items():
         print(Fore.GREEN + key_2, end="   ")
     print()
 
 
-
+print(Fore.LIGHTRED_EX + "Iltimos,kiritayotgan mahsulotingizning nomini to'liq va aniq kiriting!\n".center(135))
 while True:
-    add_or_sold = input(Fore.RED + "Mahsulot qo'shmoqchimisiz,sotmoqchimisiz,report bo'limi,database va hisobni tugatish: +/-/?/DB/E:")
+    add_or_sold = input(Fore.RED + "Mahsulot qo'shmoqchimisiz,sotmoqchimisiz,report bo'limi,database va hisobni tugatish: +/-/?/DB/0:")
     if add_or_sold == "+":
         while True:
-            add_product_key = input(Fore.CYAN + "Add product (Oilasi) /no:")
-            if add_product_key != "no":
+            add_product_key = input(Fore.CYAN + "Add product (Oilasi) /0:")
+            if add_product_key != "0":
                 database_r_key = add_product_key
                 database_s_key = add_product_key
                 if not (add_product_key in database):
@@ -80,8 +80,8 @@ while True:
                     database_r_value = {}
                     database_s_value = {}
                     while True:
-                        add_product_value_key = input(Fore.LIGHTGREEN_EX + "Add product name (nomi) /no:")
-                        if add_product_value_key != "no":
+                        add_product_value_key = input(Fore.LIGHTGREEN_EX + "Add product name (nomi) /0:")
+                        if add_product_value_key != "0":
                             database_r_value_key = add_product_value_key
                             if not (add_product_value_key in add_product_value):
                                 database_s_value_key = add_product_value_key
@@ -102,8 +102,8 @@ while True:
                     database_r[database_r_key] = database_r_value
                     database_s[database_s_key] = database_s_value
                 else:
-                    add_product_value_key = input(Fore.LIGHTGREEN_EX + "Add product name (nomi) /no:")
-                    if add_product_value_key != "no":
+                    add_product_value_key = input(Fore.LIGHTGREEN_EX + "Add product name (nomi) /0:")
+                    if add_product_value_key != "0":
                         database_r_value_key = add_product_value_key
                         if not (add_product_value_key in database[add_product_key]):
                             database_s_value_key = add_product_value_key
@@ -126,8 +126,8 @@ while True:
 
     elif add_or_sold == "-":
         while True:
-            sold_product_key = input(Fore.CYAN + "Sold product (Oilasi) /no:")
-            if sold_product_key != "no":
+            sold_product_key = input(Fore.CYAN + "Sold product (Oilasi) /0:")
+            if sold_product_key != "0":
                 # database_s_key = sold_product_key
                 if not(sold_product_key in database):
                     print("Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!")
@@ -158,19 +158,19 @@ while True:
 #                                                 Report bo'limi
 # """
     elif add_or_sold == "?":
-        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar sotildi:".center(144))
+        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar sotildi:".center(135))
         print()
         for key, value in database_s.items():
             print()
-            print(Fore.BLUE + key.center(124))
+            print(Fore.BLUE + key.center(135))
             for key_2, value_2 in value.items():
                 print(Fore.LIGHTMAGENTA_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
             print()
-        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar yangi keldi:".center(124))
+        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar yangi keldi:".center(135))
         print()
         for key, value in database_r.items():
             print()
-            print(Fore.GREEN + key.center(124))
+            print(Fore.GREEN + key.center(135))
             for key_2, value_2 in value.items():
                 print(Fore.LIGHTYELLOW_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
             print()
@@ -182,15 +182,17 @@ while True:
         login = input(Fore.CYAN + "Loginni kiriting:")
         password = input(Fore.CYAN + "Passwordni kiriting:")
         if login == "Jamshidbek" and password == "11.06.2004":
-            print(Fore.LIGHTRED_EX + "Ba'zadagi mahsulotlar:".center(144))
+            print(Fore.LIGHTRED_EX + "Ba'zadagi mahsulotlar:".center(135))
             print()
             for key, value in database.items():
                 print()
-                print(Fore.LIGHTMAGENTA_EX + key.center(124))
+                print(Fore.LIGHTMAGENTA_EX + key.center(135))
                 for key_2, value_2 in value.items():
                     print(Fore.LIGHTBLUE_EX + key_2 + "==>", Fore.LIGHTRED_EX + str(value_2), end="   ")
                 print()
-    elif add_or_sold == "E":
+        else:
+            print(Fore.LIGHTRED_EX + "Siz uchun bu bo'limga ruxsat yo'q!")
+    elif add_or_sold == "0":
         break
 
 # """
