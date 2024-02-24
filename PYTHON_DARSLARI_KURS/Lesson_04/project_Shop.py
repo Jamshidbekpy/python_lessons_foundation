@@ -1,5 +1,4 @@
 from colorama import init, Fore
-
 init(autoreset=True)
 # """
 #                                            Database bo'limi
@@ -57,14 +56,12 @@ for key, value in database.items():
 # """
 #                              Mavjud mahsulotlarni ko'rish bo'limi
 # """
-# print(database.items())
 for key, value in database.items():
     print()
     print(Fore.BLUE + key.center(135))
     for key_2, value_2 in value.items():
         print(Fore.GREEN + key_2, end="   ")
     print()
-
 
 print(Fore.LIGHTRED_EX + "Iltimos,kiritayotgan mahsulotingizning nomini to'liq va aniq kiriting!\n".center(135))
 while True:
@@ -123,7 +120,6 @@ while True:
 # """
 #                                           Sold Product bo'limi
 # """
-
     elif add_or_sold == "-":
         while True:
             sold_product_key = input(Fore.CYAN + "Sold product (Oilasi) /0:")
@@ -174,9 +170,6 @@ while True:
             for key_2, value_2 in value.items():
                 print(Fore.LIGHTYELLOW_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
             print()
-
-
-
     elif add_or_sold == "DB":
         print(Fore.RED + "Ogohlantirish:Ushbu bolimga kirish cheklangan!")
         login = input(Fore.CYAN + "Loginni kiriting:")
