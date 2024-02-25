@@ -82,17 +82,28 @@ while True:
                             database_r_value_key = add_product_value_key
                             if not (add_product_value_key in add_product_value):
                                 database_s_value_key = add_product_value_key
-                                add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Miqdori:"))
-                                database_r_value_value = add_product_value_value
-                                database_s_value_value = 0
-                                add_product_value[add_product_value_key] = add_product_value_value
-                                database_r_value[database_r_value_key] = database_r_value_value
-                                database_s_value[database_s_value_key] = database_s_value_value
+                                while True:
+                                    add_product_value_value = input(Fore.LIGHTRED_EX + "Add_Miqdori:")
+                                    if add_product_value_value.isdigit() and int(add_product_value_value) >= 0:
+                                        add_product_value_value = int(add_product_value_value)
+                                        database_r_value_value = add_product_value_value
+                                        database_s_value_value = 0
+                                        add_product_value[add_product_value_key] = add_product_value_value
+                                        database_r_value[database_r_value_key] = database_r_value_value
+                                        database_s_value[database_s_value_key] = database_s_value_value
+                                        break
+                                    else:
+                                        print(Fore.LIGHTRED_EX + "Musbat qiymat kiritmadingiz,yoki sonni kiritishda xatolikka yo'l qo'ydingiz!".center(135))
                             else:
-                                add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Miqdori:"))
-                                database_r_value_value = add_product_value_value
-                                add_product_value[add_product_value_key] += add_product_value_value
-                                database_r_value[add_product_value_key] += add_product_value_value
+                                while True:
+                                    add_product_value_value = input(Fore.LIGHTRED_EX + "Add_Miqdori:")
+                                    if add_product_value_value.isdigit() and int(add_product_value_value):
+                                        database_r_value_value = add_product_value_value
+                                        add_product_value[add_product_value_key] += add_product_value_value
+                                        database_r_value[add_product_value_key] += add_product_value_value
+                                        break
+                                    else:
+                                        print(Fore.LIGHTRED_EX + "Musbat qiymat kiritmadingiz,yoki sonni kiritishda xatolikka yo'l qo'ydingiz!".center(135))
                         else:
                             break
                     database[add_product_key] = add_product_value
@@ -104,17 +115,31 @@ while True:
                         database_r_value_key = add_product_value_key
                         if not (add_product_value_key in database[add_product_key]):
                             database_s_value_key = add_product_value_key
-                            add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Miqdori:"))
-                            database_r_value_value = add_product_value_value
-                            database_s_value_value = 0
-                            database[add_product_key][add_product_value_key] = add_product_value_value
-                            database_r[database_r_key][database_r_value_key] = database_r_value_value
-                            database_s[database_s_key][database_s_value_key] = database_s_value_value
+
+                            while True:
+                                add_product_value_value = input(Fore.LIGHTRED_EX + "Add_Miqdori:")
+                                if add_product_value_value.isdigit() and int(add_product_value_value) >= 0:
+                                    add_product_value_value = int(add_product_value_value)
+                                    database_r_value_value = add_product_value_value
+                                    database_s_value_value = 0
+                                    database[add_product_key][add_product_value_key] = add_product_value_value
+                                    database_r[database_r_key][database_r_value_key] = database_r_value_value
+                                    database_s[database_s_key][database_s_value_key] = database_s_value_value
+                                    break
+                                else:
+                                    print(Fore.LIGHTRED_EX + "Musbat qiymat kiritmadingiz,yoki sonni kiritishda xatolikka yo'l qo'ydingiz!".center(135))
                         else:
-                            add_product_value_value = int(input(Fore.LIGHTRED_EX + "Add_Midori:"))
-                            database_r_value_value = add_product_value_value
-                            database[add_product_key][add_product_value_key] += add_product_value_value
-                            database_r[database_r_key][database_r_value_key] += database_r_value_value
+                            while True:
+                                add_product_value_value = input(Fore.LIGHTRED_EX + "Add_Midori:")
+                                if add_product_value_value.isdigit() and int(add_product_value_value) >= 0:
+                                    add_product_value_value = int(add_product_value_value)
+                                    database_r_value_value = add_product_value_value
+                                    database[add_product_key][add_product_value_key] += add_product_value_value
+                                    database_r[database_r_key][database_r_value_key] += database_r_value_value
+                                    break
+                                else:
+                                    print(Fore.LIGHTRED_EX + "Musbat qiymat kiritmadingiz,yoki sonni kiritishda xatolikka yo'l qo'ydingiz!".center(135))
+
             else:
                 break
 # """
@@ -126,28 +151,33 @@ while True:
             if sold_product_key != "0":
                 # database_s_key = sold_product_key
                 if not(sold_product_key in database):
-                    print("Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!")
+                    print(Fore.LIGHTBLUE_EX + "Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!".center(135))
                     #Buyurtma bo'limiga yuboriladi
                 else:
                     database_s_key = sold_product_key
                     sold_product_value = database[sold_product_key]
                     sold_product_value_key = input(Fore.LIGHTGREEN_EX + "Sold product name (nomi) /n:")
                     if not(sold_product_value_key in sold_product_value):
-                        print("Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!")
+                        print(Fore.LIGHTBLUE_EX + "Bizda bunday mahsulot yo'q edi!Istasangiz buyurma qilishingiz mumkin!".center(135))
                         # Buyurtma bo'limiga yuboriladi
                     else:
                         database_s_value = database_s[database_s_key]
                         database_s_value_key = sold_product_value_key
                         while True:
-                            sold_product_value_value = int(input(Fore.LIGHTRED_EX + "Sold_Miqdori:"))
-                            database_s_value_value = sold_product_value_value
-                            if database[sold_product_key][sold_product_value_key] >= sold_product_value_value:
-                                database[sold_product_key][sold_product_value_key] -= sold_product_value_value
-                                database_s[database_s_key][database_s_value_key] += database_s_value_value
-                                break
+                            sold_product_value_value = input(Fore.LIGHTRED_EX + "Sold_Miqdori:")
+                            if sold_product_value_value.isdigit() and int(sold_product_value_value) >= 0:
+                                sold_product_value_value = int(sold_product_value_value)
+                                database_s_value_value = sold_product_value_value
+                                if database[sold_product_key][sold_product_value_key] >= sold_product_value_value:
+                                    database[sold_product_key][sold_product_value_key] -= sold_product_value_value
+                                    database_s[database_s_key][database_s_value_key] += database_s_value_value
+                                    break
+                                else:
+                                    database_s[database_s_key][database_s_value_key] += 0
+                                    print(Fore.LIGHTBLUE_EX + f"Kechirasiz bizda ushbu mahsulot sizga kerakli miqdordan {sold_product_value_value - database[sold_product_key][sold_product_value_key]} kam!Hohlasangiz kamroq oling.Olmasangiz 0 ni kiriting!".center(135))
                             else:
-                                database_s[database_s_key][database_s_value_key] += 0
-                                print("Kechirasiz bizda ushbu mahsulot sizga kerakli miqdordan kam!Hohlasangiz kamroq oling.Olmasangiz 0 ni kiriting!")
+                                print(Fore.LIGHTRED_EX + "Musbat qiymat kiritmadingiz,yoki sonni kiritishda xatolikka yo'l qo'ydingiz!".center(135))
+
             else:
                 break
 # """
