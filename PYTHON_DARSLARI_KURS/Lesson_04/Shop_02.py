@@ -1,9 +1,7 @@
-from colorama import init, Fore
-init(autoreset=True)
 #  __________________________________________________________DATABASE_________________________________________________________
 database = {
     "Sabzavotlar (kg)": [["Karam", "Piyoz"], [150, 250]],
-    "Mevalar (kg)": [["Shaftoli", "Nar", "Anor"], [365, 210, 150]],
+    "Mevalar (kg)": [["Shaftoli", "Orik", "Anor"], [365, 210, 150]],
     "Ichimliklar (dona)": [["Pepsi", "Sprite"], [300, 200]],
     "Sut (l)": [["Tuxum", "Qatiq"], [10, 20]],
     "Yog' (kg)": [["Qatiqli"], [50]]
@@ -13,14 +11,8 @@ sold_database = {}
 for key, value in database.items():
     value_0 = value[0]
     value_1 = value[1].copy()
-    value_01 = value[0]
-    value_11 = value[1].copy()
     add_database[key] = [value_0, value_1]
-    sold_database[key] = [value_01, value_11]
 for key, value in add_database.items():
-    for i in range(len(value[1])):
-        value[1][i] = 0
-for key, value in sold_database.items():
     for i in range(len(value[1])):
         value[1][i] = 0
 while True:
@@ -46,7 +38,6 @@ while True:
                             break
                         else:
                             print("Noto'g'ri miqdor kiritildi, iltimos qaytadan urinib ko'ring!")
-
                 else:
                     add_database[add_database_key][0].append(add_database_key_list0_element)
                     while True:
@@ -77,8 +68,17 @@ while True:
                         print("Noto'g'ri miqdor kiritildi, iltimos qaytadan urinib ko'ring!")
 #      _________________________________________SOTUV BO'LIMI_________________________________________________
     elif bolim == "2":
+        for key, value in database.items():
+            value_0 = value[0]
+            value_1 = value[1].copy()
+            sold_database[key] = [value_0, value_1]
+        for key, value in sold_database.items():
+            for i in range(len(value[1])):
+                value[1][i] = 0
         while True:
-            sold_database_key = input("Sotiladigan mahsulot oilasini kiriting:")
+            sold_database_key = input("Sotiladigan mahsulot oilasini kiriting:/0")
+            if sold_database_key == "0":
+                break
             if sold_database_key in sold_database:
                 while True:
                     sold_database_key_list0_element = input("Sotiladigan mahsulot nomini kiriting/0:")
@@ -88,7 +88,7 @@ while True:
                         while True:
                             sold_database_key_list1_element = input("Mahsulot miqdorini kiriting:")
                             index = sold_database[sold_database_key][0].index(sold_database_key_list0_element)
-                            if sold_database_key_list1_element.isdigit()  and database[sold_database_key][1][index] >= int(sold_database_key_list1_element):
+                            if sold_database_key_list1_element.isdigit() and database[sold_database_key][1][index] >= int(sold_database_key_list1_element):
                                 sold_database_key_list1_element = int(sold_database_key_list1_element)
                                 sold_database[sold_database_key][1][index] += sold_database_key_list1_element
                                 database[sold_database_key][1][index] -= sold_database_key_list1_element
@@ -101,12 +101,12 @@ while True:
                 print("Bizda bunday oila turidagi mahsulot yo'q!")
 #               ________________________________________REPORT BO'LIMI_______________________________________
     elif bolim == "3":
-        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar yangi keldi:".center(135),"\n")
+        print("Ushbu mahsulotlar yangi keldi:","\n")
         for key, value in add_database.items():
             print("\n\n", key)
             for i in range(len(value[0])):
                 print(f"{value[0][i]} ==> {value[1][i]}", end="  ")
-        print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar sotildi:".center(135),"\n")
+        print("Ushbu mahsulotlar sotildi:","\n")
         for key, value in sold_database.items():
             print("\n\n", key)
             for i in range(len(value[0])):
@@ -123,8 +123,7 @@ while True:
                 for i in range(len(value[0])):
                     print(f"{value[0][i]} ==> {value[1][i]}", end="  ")
         else:
-            print(Fore.LIGHTRED_EX + "Siz uchun bu bo'limga ruxsat yo'q!")
-
+            print("Siz uchun bu bo'limga ruxsat yo'q!")
     elif bolim == "0":
         break
 
