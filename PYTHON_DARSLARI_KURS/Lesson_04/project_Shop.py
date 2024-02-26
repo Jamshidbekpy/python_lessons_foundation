@@ -57,8 +57,9 @@ for key, value in database.items():
 #                              Mavjud mahsulotlarni ko'rish bo'limi
 # """
 for key, value in database.items():
-    print()
+    print(Fore.BLUE + 135 * "-")
     print(Fore.BLUE + key.center(135))
+    print(Fore.GREEN+135*"-")
     for key_2, value_2 in value.items():
         print(Fore.GREEN + key_2, end="   ")
     print()
@@ -187,16 +188,18 @@ while True:
         print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar sotildi:".center(135))
         print()
         for key, value in database_s.items():
-            print()
+            print(Fore.BLUE + 135 * "-")
             print(Fore.BLUE + key.center(135))
+            print(Fore.GREEN + 135 * "-")
             for key_2, value_2 in value.items():
                 print(Fore.LIGHTMAGENTA_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
             print()
         print(Fore.LIGHTRED_EX + "Ushbu mahsulotlar yangi keldi:".center(135))
         print()
         for key, value in database_r.items():
-            print()
+            print(Fore.BLUE + 135 * "-")
             print(Fore.GREEN + key.center(135))
+            print(Fore.GREEN + 135 * "-")
             for key_2, value_2 in value.items():
                 print(Fore.LIGHTYELLOW_EX + key_2 + "==>", Fore.LIGHTMAGENTA_EX + str(value_2), end="   ")
             print()
@@ -208,8 +211,9 @@ while True:
             print(Fore.LIGHTRED_EX + "Ba'zadagi mahsulotlar:".center(135))
             print()
             for key, value in database.items():
-                print()
+                print(Fore.BLUE + 135 * "-")
                 print(Fore.LIGHTMAGENTA_EX + key.center(135))
+                print(Fore.GREEN + 135 * "-")
                 for key_2, value_2 in value.items():
                     print(Fore.LIGHTBLUE_EX + key_2 + "==>", Fore.LIGHTRED_EX + str(value_2), end="   ")
                 print()

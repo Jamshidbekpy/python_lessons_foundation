@@ -6,6 +6,13 @@ database = {
     "Sut (l)": [["Tuxum", "Qatiq"], [10, 20]],
     "Yog' (kg)": [["Qatiqli"], [50]]
 }
+#_________________________________________________________DATABASENI KO'RISH____________________________________________________
+for key, value in database.items():
+    print(135 * "-")
+    print(key.center(135))
+    print(135*"-")
+    for i in value[0]:
+        print(i, end="   ")
 add_database = {}
 sold_database = {}
 for key, value in database.items():
@@ -103,15 +110,16 @@ while True:
     elif bolim == "3":
         print("Ushbu mahsulotlar yangi keldi:","\n")
         for key, value in add_database.items():
-            print("\n\n", key)
+            print(135 * "-")
+            print(key.center(135))
             for i in range(len(value[0])):
-                print(f"{value[0][i]} ==> {value[1][i]}", end="  ")
+                print(value[0][i] + ":" + str(value[1][i]), end="  ")
         print("Ushbu mahsulotlar sotildi:","\n")
         for key, value in sold_database.items():
-            print("\n\n", key)
+            print(135 * "-")
+            print(key.center(135))
             for i in range(len(value[0])):
-                print(f"{value[0][i]} ==> {value[1][i]}", end="  ")
-        pass
+                print(value[0][i] + ":" + str(value[1][i]), end="  ")
 #               __________________________________DATABASENI KO'RISH BO'LIMI_________________________________
     elif bolim == "4":
         print("Ogohlantirish:Ushbu bolimga kirish cheklangan!")
@@ -119,9 +127,10 @@ while True:
         password = input("Passwordni kiriting:")
         if login == "Jamshidbek" and password == "11.06.2004":
             for key, value in database.items():
-                print("\n\n",key)
+                print(135 * "-")
+                print(key.center(135))
                 for i in range(len(value[0])):
-                    print(f"{value[0][i]} ==> {value[1][i]}", end="  ")
+                    print(value[0][i] + ":" + str(value[1][i]), end="  ")
         else:
             print("Siz uchun bu bo'limga ruxsat yo'q!")
     elif bolim == "0":
