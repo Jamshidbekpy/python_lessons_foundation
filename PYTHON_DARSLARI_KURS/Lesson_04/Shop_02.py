@@ -114,9 +114,9 @@ while True:
         pass
 #               __________________________________DATABASENI KO'RISH BO'LIMI_________________________________
     elif bolim == "4":
-        print(Fore.RED + "Ogohlantirish:Ushbu bolimga kirish cheklangan!")
-        login = input(Fore.CYAN + "Loginni kiriting:")
-        password = input(Fore.CYAN + "Passwordni kiriting:")
+        print("Ogohlantirish:Ushbu bolimga kirish cheklangan!")
+        login = input("Loginni kiriting:")
+        password = input("Passwordni kiriting:")
         if login == "Jamshidbek" and password == "11.06.2004":
             for key, value in database.items():
                 print("\n\n",key)
