@@ -135,7 +135,3 @@ while True:
             print("Siz uchun bu bo'limga ruxsat yo'q!")
     elif bolim == "0":
         break
-
-
-
-

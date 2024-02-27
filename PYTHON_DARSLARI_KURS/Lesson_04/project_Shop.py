@@ -225,5 +225,3 @@ while True:
 # """
 #                                                Buyurtma bo'limi
 # """
-
-
