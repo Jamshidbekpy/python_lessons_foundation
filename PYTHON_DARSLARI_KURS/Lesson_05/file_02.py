@@ -110,6 +110,9 @@ while True:
                         add_database_value_value_value1 = input(select_sort_list[0])                                     # Miqdori
                         if add_database_value_value_value1.isdigit() and int(add_database_value_value_value1) > 0:
                             add_database_value_value_value1 = int(add_database_value_value_value1)
+                            break
+                        else:
+                            print("Miqdori kiritishda xatolikka yo'l qo'ydingiz!Iltimos boshqatdan urininib ko'ring!")
                     add_database_value_value_value3 = datetime.now()                                                   # Kelgan sanasi
                     add_database_value_value_value4 = datetime(date_year, date_moth, date_day)                           # Yaroqlilik muddati
 
@@ -119,10 +122,10 @@ while True:
                     if add_database_value_key.isdigit() and int(add_database_value_key) < len(select_name_list):        # Qo'shiladigan mahsulot menyuda bor
                         add_database_value_key = select_name_list[int(add_database_value_key) - 1]
                         add_database_value_value_value2 = database[add_database_key][add_database_value_key][select_sort_list[1]]    # Narxi
-                        # add_database_value_value_value = [add_database_value_value_value1, add_database_value_value_value2, add_database_value_value_value3, add_database_value_value_value4, add_database_value_value_value5]
-                        database[add_database_key][add_database_value_key][select_sort_list[0]] += add_database_value_value_value1
-                        database[add_database_key][add_database_value_key][select_sort_list[2]] = add_database_value_value_value3
-                        database[add_database_key][add_database_value_key][select_sort_list[3]] = add_database_value_value_value4
+                        
+                        database[add_database_key][add_database_value_key][select_sort_list[0]] += add_database_value_value_value1      # DATABASE GA Miqdor qo'shish
+                        database[add_database_key][add_database_value_key][select_sort_list[2]] = add_database_value_value_value3       # DATABASEGA Kelgan sanani update qilish
+                        database[add_database_key][add_database_value_key][select_sort_list[3]] = add_database_value_value_value4       # DATABASEGA Srogini update qilish
 
 
 
@@ -138,6 +141,15 @@ while True:
 
                     else:                                                                                               #Qo'shiladigan mahsulot menyuda bo'lmasa
                         select_name_list.append(add_database_value_key)
+                        while True:
+                            add_database_value_value_value2 = input(select_sort_list[1])
+                            if add_database_value_value_value2.isdigit() and int(add_database_value_value_value2) > 0:
+                                add_database_value_value_value2 = int(add_database_value_value_value2)
+                                break
+                            else:
+                                print("Narxini xato kiritdingiz!Qayta kiriting!")
+
+
 
 
 
