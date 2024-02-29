@@ -38,12 +38,22 @@ database = {
 }
 database1 = {}
 database2 = {}
-database3 = {}
+# database3 = {}
 select_page_list = ["Add_product", "Sell_product", "Database", "Report"]
 select_category_list = ["ICHIMLIKLAR", "OZIQ-OVQAT"]
 select_name_list = []
 select_sort_list = ["Miqdori:", "Narxi:", "Kelgan sanasi:", "Yaroqlilik muddati:", "Ishlab chiqarilgan mamlakati:"]
 
+add_database = {}
+add_database_value_list = []
+add_database_value_dict = {}
+add_database_value = {}
+add_database_value_dict["Miqdori:"] = 0
+add_database_value_dict["Narxi:"] = 0
+add_database_value_dict["Jami narxi:"] = 0
+add_database_value_dict["Kelgan sanasi:"] = datetime(2024, 1, 1)
+
+add_database_value = {}
 
 
 while True:
@@ -71,7 +81,7 @@ while True:
 
                 if add_database_key.isdigit() and int(add_database_key) > 0 and int(add_database_key) < 5:
                     add_database_key = select_category_list[int(add_database_key)-1]
-                    # print(add_database_key)
+                    print(add_database_key)
                     if not(bool(select_name_list)):
                         for key, value in database[add_database_key].items():
                             select_name_list.append(key)
@@ -82,13 +92,14 @@ while True:
 
                     while True:
                         date_year = input("Yaroqlilik yili:")
-                        if date_year.isdigit():
+                        if date_year.isdigit() and int(date_year) < 2040:
                             date_year = int(date_year)
                             break
                         else:
                             print("Yilni kiritishda xatolikka yo'l qo'ydingiz!Iltimos,boshqatdan urinib ko'ring!:")
                     if date_year < 2024:
                         print("Ushbu mahsulotning muddati o'tgan!Kechirasiz bazaga qo'sha olmaymiz!")
+                        select_name_list.clear()
                         break
                     while True:
                         date_moth = input("Yaroqlilik oyi:")
@@ -107,39 +118,48 @@ while True:
 
 
                     while True:
-                        add_database_value_value_value1 = input(select_sort_list[0])                                     # Miqdori
+                        add_database_value_value_value1 = input(select_sort_list[0])                                                     # Miqdori
                         if add_database_value_value_value1.isdigit() and int(add_database_value_value_value1) > 0:
                             add_database_value_value_value1 = int(add_database_value_value_value1)
                             break
                         else:
                             print("Miqdori kiritishda xatolikka yo'l qo'ydingiz!Iltimos boshqatdan urininib ko'ring!")
-                    add_database_value_value_value3 = datetime.now()                                                   # Kelgan sanasi
-                    add_database_value_value_value4 = datetime(date_year, date_moth, date_day)                           # Yaroqlilik muddati
+                    add_database_value_value_value3 = datetime.now()                                                                    # Kelgan sanasi
+                    add_database_value_value_value4 = datetime(date_year, date_moth, date_day)                                          # Yaroqlilik muddati
 
-                    add_database_value_value_value5 = input(select_sort_list[4])                                       # Mamlakati
+                    add_database_value_value_value5 = input(select_sort_list[4])                                                        # Mamlakati
 
 
-                    if add_database_value_key.isdigit() and int(add_database_value_key) < len(select_name_list):        # Qo'shiladigan mahsulot menyuda bor
+                    if add_database_value_key.isdigit() and int(add_database_value_key) < len(select_name_list)+1 :                        # Qo'shiladigan mahsulot menyuda bor
                         add_database_value_key = select_name_list[int(add_database_value_key) - 1]
-                        add_database_value_value_value2 = database[add_database_key][add_database_value_key][select_sort_list[1]]    # Narxi
-                        
+                        add_database_value_value_value2 = database[add_database_key][add_database_value_key][select_sort_list[1]]       # Narxi
                         database[add_database_key][add_database_value_key][select_sort_list[0]] += add_database_value_value_value1      # DATABASE GA Miqdor qo'shish
                         database[add_database_key][add_database_value_key][select_sort_list[2]] = add_database_value_value_value3       # DATABASEGA Kelgan sanani update qilish
                         database[add_database_key][add_database_value_key][select_sort_list[3]] = add_database_value_value_value4       # DATABASEGA Srogini update qilish
+                        add_database_value_dict["Miqdori:"] = add_database_value_value_value1
+                        add_database_value_dict["Narxi:"] = database[add_database_key][add_database_value_key][select_sort_list[1]]
+                        add_database_value_dict["Jami narxi:"] = (add_database_value_value_value2 * add_database_value_value_value1)
+                        add_database_value_dict["Kelgan sanasi:"] = add_database_value_value_value3
+                        add_database_value_list.append(add_database_value_dict)
+                        add_database_value[add_database_value_key] = add_database_value_list
+                        add_database[add_database_key] = add_database_value
+                        select_name_list.clear()
 
+                    elif add_database_value_key in database[add_database_key]:
+                        add_database_value_value_value2 = database[add_database_key][add_database_value_key][select_sort_list[1]]  # Narxi
+                        database[add_database_key][add_database_value_key][select_sort_list[0]] += add_database_value_value_value1  # DATABASE GA Miqdor qo'shish
+                        database[add_database_key][add_database_value_key][select_sort_list[2]] = add_database_value_value_value3  # DATABASEGA Kelgan sanani update qilish
+                        database[add_database_key][add_database_value_key][select_sort_list[3]] = add_database_value_value_value4  # DATABASEGA Srogini update qilish
+                        add_database_value_dict["Miqdori:"] = add_database_value_value_value1
+                        add_database_value_dict["Narxi:"] = database[add_database_key][add_database_value_key][select_sort_list[1]]
+                        add_database_value_dict["Jami narxi:"] = (add_database_value_value_value2 * add_database_value_value_value1)
+                        add_database_value_dict["Kelgan sanasi:"] = add_database_value_value_value3
+                        add_database_value_list.append(add_database_value_dict)
+                        add_database_value[add_database_value_key] = add_database_value_list
+                        add_database[add_database_key] = add_database_value
+                        select_name_list.clear()
 
-
-
-
-
-
-
-
-
-
-
-
-                    else:                                                                                               #Qo'shiladigan mahsulot menyuda bo'lmasa
+                    else:                                                                                                               #Qo'shiladigan mahsulot menyuda bo'lmasa
                         select_name_list.append(add_database_value_key)
                         while True:
                             add_database_value_value_value2 = input(select_sort_list[1])
@@ -148,30 +168,21 @@ while True:
                                 break
                             else:
                                 print("Narxini xato kiritdingiz!Qayta kiriting!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        database1[select_sort_list[0]] = add_database_value_value_value1
+                        database1[select_sort_list[1]] = add_database_value_value_value2
+                        database1[select_sort_list[2]] = add_database_value_value_value3
+                        database1[select_sort_list[3]] = add_database_value_value_value4
+                        database1[select_sort_list[4]] = add_database_value_value_value5
+                        database2[add_database_value_key] = database1
+                        database[add_database_key].setdefault(add_database_value_key, database1)
+                        add_database_value_dict["Miqdori:"] = add_database_value_value_value1
+                        add_database_value_dict["Narxi:"] = database[add_database_key][add_database_value_key][select_sort_list[1]]
+                        add_database_value_dict["Jami narxi:"] = (add_database_value_value_value2 * add_database_value_value_value1)
+                        add_database_value_dict["Kelgan sanasi:"] = add_database_value_value_value3
+                        add_database_value_list.append(add_database_value_dict)
+                        add_database_value[add_database_value_key] = add_database_value_list
+                        add_database[add_database_key] = add_database_value
+                        select_name_list.clear()
 
                 elif int(add_database_key) == 0:
                     break
@@ -182,22 +193,34 @@ while True:
         # ___________________________________________________________SELL BOLIMI__________________________________________________________________________
         elif select_page == 2:
             while True:
-                pass
-            pass
+               pass
+
+
+        # ____________________________________________________DATABASENI KO'RISH BOLIMI___________________________________________________________________
+        elif select_page == 3:
+            for key, value in database.items():
+                print("\n\n", key.center(130))
+                for key_01, value_01 in database[key].items():
+                    print("\n", key_01)
+                    for key_02,value_02 in database[key][key_01].items():
+                        print(key_02, ":", value_02)
+                    print(130*"_")
 
         # ______________________________________________________________REPORT__________________________________________________________________________
-        elif select_page == 3:
-            while True:
-                pass
-            pass
-        # ______________________________________________________DATABASENI KO'RISH BOLIMI__________________________________________________________________________
         elif select_page == 4:
-            pass
+            while True:
+                add_sell = input("Qo'shilgan mahsulotlar ro'yxati kerakmi yoki sotilgan +/-/0:")
+                if add_sell == "0":
+                    break
+                else:
+                    print("Bo'limni noto'g'ri tanladingiz!Chiqishni istasangiz 0 ni kiriting!")
+
+
+
     else:
         print("SAHIFANI NOMERINI XATO KIRITDINGIZ!ILTIMOS BOSHQATDAN TANLANG!")
 
 
 
-# _________________________________________________________________FINISH PROGRAMM_______________________________________________________________________
+# ___________________________________________________________________FINISH PROGRAMM_______________________________________________________________________
 print("DASTUR MUOFFAQQIYATLI YAKUNLANDI!".center(130))
-print(database)
