@@ -214,7 +214,7 @@ while True:
 
                 sell_database_key = input("MAHSULOT TURKUMINI KIRITING 1/2/0:")                                         # TURKUMLARNI TANLASH
 
-                if sell_database_key.isdigit() and int(sell_da.tabase_key) > 0 and int(sell_database_key) < 5:
+                if sell_database_key.isdigit() and int(sell_database_key) > 0 and int(sell_database_key) < 5:
                     sell_database_key = select_category_list[int(sell_database_key) - 1]
                     print(sell_database_key)
                     if not (bool(select_name_list)):
