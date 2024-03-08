@@ -1,0 +1,10 @@
+			Savollar
+
+1)Ushbu jadvaldan oyligi 1000 $ dan yuqori bo'lgan ishchilarni saralab chiqaring.
+2)Jadvaldan ism yoki familiya bo'yicha turli insonlarni qidiring.Jadvalda mavjud bo'lsa,u haqidai barcha ma'lumotlarni chiroyli ko'rinishda qaytaring.Bo'lmasa,ushbu inson bizning ro'yxatda mavjud emas yozuvini chiqaring.
+3).Hozirda 50 yoshga to'lgan shaxslarni saralang.Ularning barcha ma'lumotlarni consolega chiqaring.
+4)Yangi sheet qo'shing.Bu sheetga 25 yoshli ishchilar ro'yxatini chiqaring.Ro'yxatda ularning barch ma'lumotlari aniq holda qaytarilsin.
+5)Exelda berilgan ushbu ma'lumotlarni dictonary ko'rnishida matnli faylga o'tkazing.
+6)Matnli fayldagi ma'lumotdan 30 yoshli shaxslarni ma'lumotlarini yangi exel faylga saqlang.
+7)Jadvaldan shaxslarni first_name,last_name,salery si bo'yicha yangi sheetga nusxa ko'chiring.
+8)#Jurnaldagi shaxslarni oyligi bo'yicha diagramma qiling.
