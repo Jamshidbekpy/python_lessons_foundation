@@ -26,14 +26,28 @@ while True:
 
     if number.isdigit() and int(number) >0 and int(number) <=9:
         if int(number) == 1:
-            for row in range(1, sheet.max_row + 1):
+            list_info = []
+            for row in range(2, sheet.max_row + 1):
+                list_i = []
                 for column in range(1, sheet.max_column + 1):
                     cell_value = sheet.cell(row=row, column=column).value
-                    print(cell_value, end='\t')
-                print()
+                    list_i.append(cell_value)
+                list_info.append(list_i)
+            print(list_info)
+
 
         elif int(number) == 2:
-           pass
+            search_fl_name = input('Ism yoki familiya kiriting:')
+            n = 0
+            for row in range(2, 1001):
+                string_f_name = str(sheet[f'A{row}'].value)
+                string_l_name = str(sheet[f'B{row}'].value)
+                if search_fl_name == (string_f_name or string_l_name):
+                    n += 1
+                    print(sheet[f'A1'].value, ":", string_f_name, "    ", sheet[f'B1'].value, ":", string_l_name, "    ", sheet[f'C1'].value, ":", sheet[f'C{row}'].value, "    ",sheet[f'D1'].value, ":", sheet[f'D{row}'].value, "    ", sheet[f'E1'].value, ":", sheet[f'E{row}'].value, "    ", sheet[f'F1'].value, ":", sheet[f'F{row}'].value, "    ", sheet[f'G1'].value, ":", sheet[f'G{row}'].value, "    ", sheet[f'H1'].value, ":", sheet[f'H{row}'].value, "    ", sheet[f'I1'].value, ":", sheet[f'I{row}'].value)
+            if n == 0:
+                print("Bunday ismli shaxs topilmadi!")
+
         elif int(number) == 3:
            pass
         elif int(number) == 4:
