@@ -39,7 +39,7 @@ while True:
         elif int(number) == 2:
             search_fl_name = input('Ism yoki familiya kiriting:')
             n = 0
-            for row in range(2, 1001):
+            for row in range(2, sheet.max_row + 1):
                 string_f_name = str(sheet[f'A{row}'].value)
                 string_l_name = str(sheet[f'B{row}'].value)
                 if search_fl_name == (string_f_name or string_l_name):

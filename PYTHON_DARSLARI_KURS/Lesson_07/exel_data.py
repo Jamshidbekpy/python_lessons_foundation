@@ -41,14 +41,14 @@ while True:
 
         elif int(number) == 2:
             search_fl_name = input('Ism yoki familiya kiriting:')
-            for i in range(ws.max_row-1):
+            for i in range(1000):
                 string_f_name = str(sheet[f'A{i + 2}'].value)
                 string_l_name = str(sheet[f'B{i + 2}'].value)
                 if (string_f_name or string_l_name) == search_fl_name:
                     print(str(string_f_name), "    ", str(string_l_name), "    ", str(sheet[f'C{i + 2}'].value), "    ", str(sheet[f'D{i + 2}'].value), "    ", str(sheet[f'E{i + 2}'].value), "    ", str(sheet[f'F{i + 2}'].value), "    ", str(sheet[f'G{i + 2}'].value))
 
         elif int(number) == 3:
-            for i in range(ws.max_row-1):
+            for i in range(1000):
                 string_brith = sheet[f'F{i + 2}'].value
                 print(string_brith)
                 if isinstance(string_brith, str):
@@ -68,7 +68,7 @@ while True:
         elif int(number) == 4:
             new_sheet = wb.create_sheet("25_yoshlilar")
             new_sheet.append([sheet['A1'].value, sheet['B1'].value, sheet['C1'].value, sheet['D1'].value, sheet['E1'].value, sheet['F1'].value, sheet['G1'].value])
-            for i in range(ws.max_row-1):
+            for i in range(1000):
                 string_brith = sheet[f'F{i + 2}'].value
                 if isinstance(string_brith, str):
                     old_date = int(string_brith[-4:])
@@ -88,7 +88,7 @@ while True:
         elif int(number) == 5:
             dict_data = {}
             list_inst = []
-            for i in range(ws.max_row-1):
+            for i in range(1000):
                 list_i = [sheet[f'A{i + 2}'].value, sheet[f'B{i + 2}'].value, sheet[f'C{i + 2}'].value,sheet[f'D{i + 2}'].value, sheet[f'E{i + 2}'].value, sheet[f'F{i + 2}'].value, sheet[f'G{i + 2}'].value]
                 dict_data.setdefault(f'id{i + 1}', list_i)
             with open('data', 'wb') as data:
@@ -114,7 +114,7 @@ while True:
         elif int(number) == 9:
             select = input("O'chirish fayl nomini to'liq kiriting:")
             if os.path.exists(select):
-                os.rmdir(select)
+                os.remove(select)
 
             else:
                 print("Bunday fayl yo'q!")

@@ -1,0 +1,421 @@
+
+
+Nomi : Pepsi
+Miqdori : 45
+Narxi : 10000
+Chiqarilgan sanasi : Saturday,December 9,2023
+Muddati tugash sanasi : Sunday,December 10,2023
+Kelgan vaqti : 2024-03-15 16:55:34.755000
+Mamlakat : O'zbekiston
+
+Nomi : Pepsi
+Miqdori : -20
+Narxi : 10000
+Chiqarilgan sanasi : Monday,December 11,2023
+Muddati tugash sanasi : Thursday,December 14,2023
+Kelgan vaqti : 2024-03-15 16:55:34.806000
+Mamlakat : O'zbekiston
+
+Nomi : Pepsi
+Miqdori : 10
+Narxi : 10000
+Chiqarilgan sanasi : Saturday,December 9,2023
+Muddati tugash sanasi : Sunday,December 10,2023
+Kelgan vaqti : 2024-03-15 16:59:55.912000
+Mamlakat : O'zbekiston
+
+Nomi : Pepsi
+Miqdori : 90
+Narxi : 10000
+Chiqarilgan sanasi : Sunday,December 10,2023
+Muddati tugash sanasi : Monday,December 11,2023
+Kelgan vaqti : 2024-03-15 16:59:55.971000
+Mamlakat : O'zbekiston
+
+Nomi : Pepsi
+Miqdori : 77
+Narxi : 10000
+Chiqarilgan sanasi : Monday,December 11,2023
+Muddati tugash sanasi : Thursday,December 14,2023
+Kelgan vaqti : 2024-03-15 16:59:56.013000
+Mamlakat : O'zbekiston
+
+Nomi : Pepsi
+Miqdori : 23
+Narxi : 10000
+Chiqarilgan sanasi : Monday,December 11,2023
+Muddati tugash sanasi : Thursday,December 14,2023
+Kelgan vaqti : 2024-03-15 17:04:01.143000
+Mamlakat : O'zbekiston
+
+Nomi : Pepsi
+Miqdori : 77
+Narxi : 10000
+Chiqarilgan sanasi : 2003-06-11 00:00:00
+Muddati tugash sanasi : 2025-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:04:01.202000
+Mamlakat : Davlat
+
+Nomi : Pepsi
+Miqdori : 53
+Narxi : 10000
+Chiqarilgan sanasi : 2003-06-11 00:00:00
+Muddati tugash sanasi : 2025-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:04:01.239000
+Mamlakat : Davlat
+
+
+Nomi : Pepsi
+Miqdori : 57
+Narxi : 10000
+Chiqarilgan sanasi : 2003-06-11 00:00:00
+Muddati tugash sanasi : 2025-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:08:20.921000
+Mamlakat : Davlat
+
+Nomi : Pepsi
+Miqdori : 143
+Narxi : 10000
+Chiqarilgan sanasi : 2003-06-11 00:00:00
+Muddati tugash sanasi : 2025-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:08:20.984000
+Mamlakat : Davlat
+
+Nomi : Pepsi
+Miqdori : 43
+Narxi : 10000
+Chiqarilgan sanasi : 2004-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:08:21.041000
+Mamlakat : Davlat
+
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2003-06-11 00:00:00
+Muddati tugash sanasi : 2025-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:10:17.240000
+Mamlakat : Davlat
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2004-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:10:17.288000
+Mamlakat : Davlat
+
+Nomi : Pepsi
+Miqdori : 73
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:10:17.342000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 27
+Narxi : 10000
+Chiqarilgan sanasi : 2004-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:19:59.687000
+Mamlakat : Davlat
+
+Nomi : Pepsi
+Miqdori : 3
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:19:59.744000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 7
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:23:35.453000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:23:35.601000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 13
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:23:35.714000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:30:00.646000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:30:00.735000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:30:00.790000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:31:07.199000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 30
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:31:07.285000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 30
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:31:07.332000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:36:18.806000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:36:18.885000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 0
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:36:18.918000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:37:10.086000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:37:10.162000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 0
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:37:10.195000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:38:22.536000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 60
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:38:22.617000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:38:22.701000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:42:46.400000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 60
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:42:46.482000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:42:46.578000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:44:02.848000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 60
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:44:02.932000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 30
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:44:03.051000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:44:41.980000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 60
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:44:42.048000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 40
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:44:42.120000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:47:13.226000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 60
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:47:13.281000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 40
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:47:13.335000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 0
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 17:50:23.328000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 0
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 17:50:23.396000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 5
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 17:50:23.460000
+Mamlakat : hgcfych
+
+
+Nomi : Pepsi
+Miqdori : 100
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-12 00:00:00
+Muddati tugash sanasi : 2024-06-12 00:00:00
+Kelgan vaqti : 2024-03-15 19:25:23.469000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 20
+Narxi : 10000
+Chiqarilgan sanasi : 2024-06-13 00:00:00
+Muddati tugash sanasi : 2024-06-13 00:00:00
+Kelgan vaqti : 2024-03-15 19:25:23.638000
+Mamlakat : hgcfych
+
+Nomi : Pepsi
+Miqdori : 0
+Narxi : 10000
+Chiqarilgan sanasi : 2004-06-11 00:00:00
+Muddati tugash sanasi : 2024-06-11 00:00:00
+Kelgan vaqti : 2024-03-15 19:25:23.704000
+Mamlakat : DAvlat
+
