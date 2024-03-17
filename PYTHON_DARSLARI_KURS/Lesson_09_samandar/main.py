@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 from datetime import datetime
 import os
-
+database = load_workbook('DATABASE.xlsx')
 def product_bolim_name()->list:
     list_bolim = ['','Mevalar','Ichimliklar']
     for index,bolim in enumerate(list_bolim):
@@ -32,7 +32,6 @@ def product_narxi()->int:
             return int(narx)
         else:
             print('Narx xato kiritildi!')
-       
 
 def chiqarilgan_sana()->datetime:
     while True:
@@ -58,7 +57,6 @@ def product_country()->str:
 def add_product()->None:
     l_bolim_name = product_bolim_name() # [select,select_name]
     print(l_bolim_name)
-    database = load_workbook('DATABASE.xlsx')
     sheet = database[l_bolim_name[0]]
     def tekshir():
         for i in range(2,sheet.max_row+1):
@@ -101,7 +99,6 @@ def add_product()->None:
     main()         
 def sell_product()->None:
     l_bolim_name = product_bolim_name() # [select,select_name]
-    database = load_workbook('DATABASE.xlsx')
     sheet = database[l_bolim_name[0]]
     def tekshir():
         for i in range(2,sheet.max_row+1):
@@ -154,8 +151,7 @@ def remove():
         os.remove('add_report.txt') 
     if os.path.exists('sell_report.txt'):
         os.remove('sell_report.txt')
-    exit()  
-    
+    exit()   
 def main():
     select = input('1. Add\n2. Sell\n3. Report\n0. Exit\nTanlang:')
     if select == '1':
