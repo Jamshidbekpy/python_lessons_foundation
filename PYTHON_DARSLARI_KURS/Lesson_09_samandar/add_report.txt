@@ -1,6 +1,0 @@
-Mahsulot nomi: olma
-Miqdor: 100
-Narx: 12000
-Kelgan sanasi: 2024-03-18 01:21:43.460888
-Jami summa: 1200000
-
