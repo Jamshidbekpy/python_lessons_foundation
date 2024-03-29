@@ -1,4 +1,4 @@
-from re import search,findall,sub,match
+from re import findall,sub,match
 
 inf_reg = r'Jamshidbek'
 tel_reg  = r'\+998\s\d{9}'

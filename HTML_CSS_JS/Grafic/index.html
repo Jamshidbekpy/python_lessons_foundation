@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafik Jadvalga Qo'shish</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div>
+    <label for="xInput">X qiymati:</label>
+    <input type="number" id="xInput">
+    <label for="yInput">Y qiymati:</label>
+    <input type="number" id="yInput">
+    <button onclick="addData()">Qo'shish</button>
+  </div>
+  <canvas id="myChart" width="400" height="400"></canvas>
+
+  <script>
+    const xValues = [];
+    const yValues = [];
+    const ctx = document.getElementById('myChart').getContext('2d');
+    let myChart;
+
+    function addData() {
+      const xInput = document.getElementById('xInput');
+      const yInput = document.getElementById('yInput');
+      const x = parseFloat(xInput.value);
+      const y = parseFloat(yInput.value);
+      
+      if (!isNaN(x) && !isNaN(y)) {
+        xValues.push(x);
+        yValues.push(y);
+        
+        if (myChart) {
+          myChart.destroy();
+        }
+
+        myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: xValues,
+            datasets: [{
+              label: 'Y vs. X',
+              data: yValues,
+              fill: false,
+              borderColor: 'rgb(75, 192, 192)',
+              tension: 0.1
+            }]
+          },
+          options: {
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'X qiymati'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Y qiymati'
+                }
+              }
+            }
+          }
+        });
+        
+        xInput.value = '';
+        yInput.value = '';
+      } else {
+        alert('X va Y qiymatlari raqamlar bo\'lishi kerak!');
+      }
+    }
+  </script>
+</body>
+</html>

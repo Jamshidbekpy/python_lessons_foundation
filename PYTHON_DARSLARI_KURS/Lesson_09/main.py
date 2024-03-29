@@ -155,7 +155,7 @@ def sell_data()->None:
     for i in range(2,sheet.max_row+1):
         price.append(sheet[f'B{i}'].value)
         print(i-1,'-->',sheet[f'B{i}'].value)
-    select = input('Narxni tanlang:')
+    select = input('Narxni tanlang:') 
     if select.isdigit() and int(select) <= len(price) and int(select) > 0:
         select = int(price[int(select)-1]) # select bu narxni belgilaydi
         print(select)

@@ -45,3 +45,13 @@ print(password_tekshir(parol4))  # False
 print(password_tekshir(parol5))  # False
 print(password_tekshir(parol6))  # False
 print(password_tekshir(parol7))  # False
+"""
+    # 8600 6800 0000 0000
+    # 
+    # 8600680000000000
+"""
+reg_card = r'^(\d{4}[\s]?){3}\d{4}$'  
+card = input('Enter card number: ')
+print(re.match(reg_card,card))
+reg = r'^\w'
+print(re.match(reg,'&'))
