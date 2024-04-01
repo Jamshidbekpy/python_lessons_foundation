@@ -5,23 +5,6 @@ class Product(ProductStructure):
     
     __date_of_arrival = datetime.now()
     @classmethod
-    def get_department_and_name(cls):
-        l_department = ['','Ichimliklar','Oziq-ovqat']
-        for index,department in enumerate(l_department):
-            if index == 0:
-                continue
-            print(f'{index} --> {department}')
-        select = input('Bolimni tanlang/0: ')
-        if select.isdigit() and int(select) > 0 and int(select) < len(l_department):
-            select = l_department[int(select)]
-            select_name = input('Mahsulot nomini kiriting:')
-            return [select,select_name]
-        elif select == '0':
-            return 0        
-        else :
-            print('Bo\'lim nomi xato kiritildi!Iltimos boshqatdan kiriting!')
-            return 0
-    @classmethod
     def get_quantity(cls):
         while True:
             quantity = input('Miqdorni kiriting:')

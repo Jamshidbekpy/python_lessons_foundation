@@ -68,18 +68,7 @@ class ShopStructure(ABC):
 
     
 class ProductStructure(ABC):
-    @abstractmethod
-    def get_department_and_name(self)->list:
-        """
-        Returns a list containing the department and name of the product.
 
-        The list should have two elements: the department and the name of
-        the product, in that order.
-
-        :return: A list containing the department and name of the product
-        :rtype: list
-        """
-        pass
     @abstractmethod
     def get_quantity(self)->int:
         """
