@@ -26,16 +26,22 @@ class Product(ProductStructure):
             old_date = input('Chiqarilgan sana kiriting *kun/oy/yil*:')
             try:  
                 date = datetime.strptime(old_date,'%d/%m/%Y')
-                return date
+                if date < cls.__date_of_arrival:
+                    return date
+                else:
+                    print('Chiqarilgan sana xato kiritildi!')
             except:
                 print('Chiqarilgan sana xato kiritildi!') 
     @classmethod
     def get_expiration_date(cls):
         while True:
             expiration_date = input('Muddati tugaydigan sanani kiriting *kun/oy/yil*:')
-            try:  
+            try:
                 date = datetime.strptime(expiration_date,'%d/%m/%Y')
-                return date
+                if date > cls.__date_of_arrival:
+                    return date
+                else:
+                    print('Muddati tugaydigan sana xato kiritildi!')
             except:
                 print('Muddati tugaydigan sana xato kiritildi!') 
         pass

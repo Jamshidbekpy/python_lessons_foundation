@@ -1,6 +1,0 @@
-Mahsulot nomi: cola
-Miqdor: 10
-Narx: 15000
-Kelgan sanasi: 2024-04-01 17:17:23.644752
-Jami summa: 150000
-
