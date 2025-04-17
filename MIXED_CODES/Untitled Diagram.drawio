@@ -1,9 +1,66 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.13">
   <diagram name="Page-1" id="ooSfSt_RsLtdojo9QwYs">
-    <mxGraphModel>
+    <mxGraphModel dx="1188" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-1" value="Home" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-2" value="Magazines" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-3" value="Article" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-4" value="Hotels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-6" value="News" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="379" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-7" value="Travel destination" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-8" value="Documents" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-9" value="Map" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="20" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BSoCVsd3ukMMBII8yLOK-10" target="BSoCVsd3ukMMBII8yLOK-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-10" value="Document 1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="547.5" y="90" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BSoCVsd3ukMMBII8yLOK-11" target="BSoCVsd3ukMMBII8yLOK-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-11" value="Document2" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="547.5" y="140" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-13" value="....." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="547.5" y="190" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-15" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="45" y="190" width="345" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-17" value="Hotel" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="BSoCVsd3ukMMBII8yLOK-15">
+          <mxGeometry x="147.5" y="60" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-18" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="43" y="400" width="347" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-19" value="News" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="BSoCVsd3ukMMBII8yLOK-18">
+          <mxGeometry x="148.5" y="68" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-21" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="400" width="340" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="BSoCVsd3ukMMBII8yLOK-23" value="Travel Destination" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="BSoCVsd3ukMMBII8yLOK-21">
+          <mxGeometry x="110" y="65" width="120" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
