@@ -8,3 +8,7 @@ for i in range(n):
         else:
             print("+", end="")
     print()
+    
+
+for i in range(n):
+  print(i*"-"+"*"+(n-i-1)*"+")
